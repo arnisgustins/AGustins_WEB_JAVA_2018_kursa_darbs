@@ -1,1 +1,3 @@
-# AGustins_WEB_JAVA_2018_kursa_darbs
+# AGustins WEB JAVA 2018 kursa darbs 
+
+
