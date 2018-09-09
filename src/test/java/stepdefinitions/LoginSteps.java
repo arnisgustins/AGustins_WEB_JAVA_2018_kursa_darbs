@@ -13,7 +13,16 @@ public class LoginSteps {
     }
 
     @When("^I log in this account$")
-    public void iLogInThisAccount() {
+    public void iLogInThisAccount() throws InterruptedException {
+        test.getNavigation().waitUntilHomepageIsLoaded();
 
+        test.getNavigation().pressMyAccountButton();
+        test.getNavigation().pressLoginButton();
+
+        test.getLoginPage().enterEmail(test.getUser().getEmail());
+        test.getLoginPage().enterPassword(test.getUser().getPassword());
+        test.getLoginPage().pressLogin();
+
+        Thread.sleep(10000);
     }
 }

@@ -14,7 +14,7 @@ public class NavigationSteps {
 
     @And("^I navigate to Home page$")
     public void iNavigateToHomePage() {
-
+        test.getNavigation().pressHomeButton();
     }
 
     @And("^I navigate to Accounts page$")

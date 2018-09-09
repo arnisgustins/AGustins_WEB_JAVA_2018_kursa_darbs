@@ -1,7 +1,9 @@
 package general;
 
+import lombok.Data;
 import pages.*;
 
+@Data
 public class TestContext {
 
     private User user;
@@ -15,7 +17,7 @@ public class TestContext {
     private NavigationPageObject navigation;
 
     public TestContext() {
-        user = new User("test@test.com", "test");
+        user = new User("test@test.com", "test123");
         flight = new Flight();
 
         accountPage = new AccountPageObject();
