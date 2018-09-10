@@ -14,10 +14,11 @@ public class TestContext {
     private InvoicePageObject invoicePage;
     private LandingPageObject landingPage;
     private LoginPageObject loginPage;
+    private SignUpPageObject signupPage;
     private NavigationPageObject navigation;
 
     public TestContext() {
-        user = new User("test@test.com", "test123");
+        user = new User();
         flight = new Flight();
 
         accountPage = new AccountPageObject();
@@ -26,6 +27,7 @@ public class TestContext {
         invoicePage = new InvoicePageObject();
         landingPage = new LandingPageObject();
         loginPage = new LoginPageObject();
+        signupPage = new SignUpPageObject();
         navigation = new NavigationPageObject();
     }
 }

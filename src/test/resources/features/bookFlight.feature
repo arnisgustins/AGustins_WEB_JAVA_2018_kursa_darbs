@@ -1,7 +1,7 @@
 Feature: This feature is about booking a flight
 
   Scenario: Book a flight
-    Given I have an existing account
+    Given I have created new account and logged out
     When I log in this account
       And I navigate to Home page
       And I select FLIGHTS menu in booking section

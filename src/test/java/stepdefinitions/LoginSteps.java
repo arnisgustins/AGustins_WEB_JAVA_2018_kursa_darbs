@@ -23,6 +23,6 @@ public class LoginSteps {
         test.getLoginPage().enterPassword(test.getUser().getPassword());
         test.getLoginPage().pressLogin();
 
-        Thread.sleep(10000);
+
     }
 }

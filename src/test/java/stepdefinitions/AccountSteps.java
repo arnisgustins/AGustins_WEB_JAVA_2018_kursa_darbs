@@ -12,8 +12,4 @@ public class AccountSteps {
         this.test = testContext;
     }
 
-    @Given("^I have an existing account$")
-    public void iHaveAnExistingAccount() {
-
-    }
 }

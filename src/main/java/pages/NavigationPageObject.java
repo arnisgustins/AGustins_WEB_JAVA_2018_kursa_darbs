@@ -20,6 +20,14 @@ public class NavigationPageObject {
         return $(By.xpath("//nav/descendant::a[ contains(text(), 'Login') ]"));
     }
 
+    private SelenideElement getLogOutButton() {
+        return $(By.xpath("//nav/descendant::a[ contains(text(), 'Logout') ]"));
+    }
+
+    private SelenideElement getUserAccountButton(String username) {
+        return $(By.xpath("//nav/descendant::a[contains(text(), '" + username + "')]"));
+    }
+
     public void waitUntilHomepageIsLoaded() {
         getLoadingIndicator().waitUntil(Condition.attribute("style", "display: none;"), 5000);
     }
@@ -34,5 +42,13 @@ public class NavigationPageObject {
 
     public void pressHomeButton() {
 
+    }
+
+    public void pressUserAccountButton(String username) {
+        getUserAccountButton(username).click();
+    }
+
+    public void pressLogOutButton() {
+        getLogOutButton().click();
     }
 }
