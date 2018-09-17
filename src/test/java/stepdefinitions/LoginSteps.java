@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 import general.TestContext;
 
@@ -14,15 +13,11 @@ public class LoginSteps {
 
     @When("^I log in this account$")
     public void iLogInThisAccount() throws InterruptedException {
-        test.getNavigation().waitUntilHomepageIsLoaded();
-
-        test.getNavigation().pressMyAccountButton();
-        test.getNavigation().pressLoginButton();
-
         test.getLoginPage().enterEmail(test.getUser().getEmail());
         test.getLoginPage().enterPassword(test.getUser().getPassword());
         test.getLoginPage().pressLogin();
 
-
+        Thread.sleep(1000);
+        test.getNavigation().waitUntilLoadingisDone();
     }
 }

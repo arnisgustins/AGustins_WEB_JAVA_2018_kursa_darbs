@@ -20,6 +20,10 @@ public class NavigationPageObject {
         return $(By.xpath("//nav/descendant::a[ contains(text(), 'Login') ]"));
     }
 
+    private SelenideElement getSignUpButton() {
+        return $(By.xpath("//nav/descendant::a[ contains(text(), 'Sign Up') ]"));
+    }
+
     private SelenideElement getLogOutButton() {
         return $(By.xpath("//nav/descendant::a[ contains(text(), 'Logout') ]"));
     }
@@ -28,7 +32,11 @@ public class NavigationPageObject {
         return $(By.xpath("//nav/descendant::a[contains(text(), '" + username + "')]"));
     }
 
-    public void waitUntilHomepageIsLoaded() {
+    private SelenideElement getHomeButton() {
+        return $(By.xpath("//nav/descendant::a[contains(text(), 'Home')]"));
+    }
+
+    public void waitUntilLoadingisDone() {
         getLoadingIndicator().waitUntil(Condition.attribute("style", "display: none;"), 5000);
     }
 
@@ -40,8 +48,12 @@ public class NavigationPageObject {
         getLoginButton().click();
     }
 
-    public void pressHomeButton() {
+    public void pressSignUpButton() {
+        getSignUpButton().click();
+    }
 
+    public void pressHomeButton() {
+        getHomeButton().click();
     }
 
     public void pressUserAccountButton(String username) {

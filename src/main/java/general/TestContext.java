@@ -16,6 +16,7 @@ public class TestContext {
     private LoginPageObject loginPage;
     private SignUpPageObject signupPage;
     private NavigationPageObject navigation;
+    private FlightBookingPageObject flightBooking;
 
     public TestContext() {
         user = new User();
@@ -29,5 +30,6 @@ public class TestContext {
         loginPage = new LoginPageObject();
         signupPage = new SignUpPageObject();
         navigation = new NavigationPageObject();
+        flightBooking = new FlightBookingPageObject();
     }
 }
