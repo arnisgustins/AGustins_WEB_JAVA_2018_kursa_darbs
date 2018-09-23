@@ -1,8 +1,10 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
+
+
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -86,6 +88,7 @@ public class LandingPageObject {
     }
 
     public void selectSearchResult() {
+        getSearchResult().waitUntil(Condition.visible, 5000);
         getSearchResult().click();
     }
 
@@ -124,5 +127,6 @@ public class LandingPageObject {
     public void pressFlightSearchButton() {
         getFlightSearchButton().click();
     }
+
 
 }

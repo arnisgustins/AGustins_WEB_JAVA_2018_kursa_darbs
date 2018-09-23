@@ -9,10 +9,10 @@ public class Flight {
     private String flightClass;
     private String flightType;
     private String departureDate;
-    private String arrivalDate;
-    private int adultAmount;
-    private int childrenAmount;
-    private int infantAmount;
+    private String returnDate;
+    private String adultAmount;
+    private String childrenAmount;
+    private String infantAmount;
 
     public Flight() {
     }

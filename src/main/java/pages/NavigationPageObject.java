@@ -12,6 +12,10 @@ public class NavigationPageObject {
         return $(By.xpath("//nav/descendant::li[@id = 'li_myaccount' ]"));
     }
 
+    private SelenideElement getAccountButton() {
+        return $(By.xpath("//li[@class='open']//a[contains(text(), 'Account')]"));
+    }
+
     private SelenideElement getLoadingIndicator() {
         return $(By.id("preloader"));
     }
@@ -37,6 +41,7 @@ public class NavigationPageObject {
     }
 
     public void waitUntilLoadingisDone() {
+        getLoadingIndicator().waitUntil(Condition.visible, 10000);
         getLoadingIndicator().waitUntil(Condition.attribute("style", "display: none;"), 5000);
     }
 
@@ -62,5 +67,9 @@ public class NavigationPageObject {
 
     public void pressLogOutButton() {
         getLogOutButton().click();
+    }
+
+    public void pressAccountButton() {
+        getAccountButton().click();
     }
 }

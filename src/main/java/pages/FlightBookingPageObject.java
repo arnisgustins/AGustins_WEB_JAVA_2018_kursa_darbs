@@ -13,6 +13,7 @@ public class FlightBookingPageObject {
 
 
     public void pressFirstBookingButton() {
+        getFirstBookingButton().scrollTo();
         getFirstBookingButton().click();
     }
 }

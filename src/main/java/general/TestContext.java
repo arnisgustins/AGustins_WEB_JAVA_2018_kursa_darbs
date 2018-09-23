@@ -10,7 +10,6 @@ public class TestContext {
     private Flight flight;
     private AccountPageObject accountPage;
     private ConfirmFlightBookingPageObject confirmBookingPage;
-    private FlightDetailsPageObject detailsPage;
     private InvoicePageObject invoicePage;
     private LandingPageObject landingPage;
     private LoginPageObject loginPage;
@@ -24,7 +23,6 @@ public class TestContext {
 
         accountPage = new AccountPageObject();
         confirmBookingPage = new ConfirmFlightBookingPageObject();
-        detailsPage = new FlightDetailsPageObject();
         invoicePage = new InvoicePageObject();
         landingPage = new LandingPageObject();
         loginPage = new LoginPageObject();

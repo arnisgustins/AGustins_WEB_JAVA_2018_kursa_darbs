@@ -23,8 +23,10 @@ public class NavigationSteps {
         test.getNavigation().waitUntilLoadingisDone();
     }
 
-    @And("^I navigate to Accounts page$")
-    public void iNavigateToAccountsPage() {
-
+    @And("^I navigate to Account page$")
+    public void iNavigateToAccountPage() {
+        test.getNavigation().pressUserAccountButton(test.getUser().getFirstName());
+        test.getNavigation().pressAccountButton();
+        test.getNavigation().waitUntilLoadingisDone();
     }
 }
