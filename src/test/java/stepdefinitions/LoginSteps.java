@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 import general.TestContext;
 
@@ -14,6 +13,10 @@ public class LoginSteps {
 
     @When("^I log in this account$")
     public void iLogInThisAccount() {
+        test.getLoginPage().enterEmail(test.getUser().getEmail());
+        test.getLoginPage().enterPassword(test.getUser().getPassword());
+        test.getLoginPage().pressLogin();
 
+        test.getNavigation().waitUntilLoadingisDone();
     }
 }

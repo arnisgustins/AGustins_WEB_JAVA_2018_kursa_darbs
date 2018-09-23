@@ -1,7 +1,7 @@
 package stepdefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import general.TestContext;
 
 public class NavigationSteps {
@@ -12,13 +12,21 @@ public class NavigationSteps {
         this.test = testContext;
     }
 
-    @And("^I navigate to Home page$")
-    public void iNavigateToHomePage() {
-
+    @Given("^I am on Homepage$")
+    public void iAmOnHomepage() {
+        test.getNavigation().waitUntilLoadingisDone();
     }
 
-    @And("^I navigate to Accounts page$")
-    public void iNavigateToAccountsPage() {
+    @And("^I navigate to Home page$")
+    public void iNavigateToHomePage() {
+        test.getNavigation().pressHomeButton();
+        test.getNavigation().waitUntilLoadingisDone();
+    }
 
+    @And("^I navigate to Account page$")
+    public void iNavigateToAccountPage() {
+        test.getNavigation().pressUserAccountButton(test.getUser().getFirstName());
+        test.getNavigation().pressAccountButton();
+        test.getNavigation().waitUntilLoadingisDone();
     }
 }
