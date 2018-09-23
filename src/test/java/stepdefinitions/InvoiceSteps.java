@@ -41,7 +41,7 @@ public class InvoiceSteps {
         assertThat(test.getInvoicePage().isPhoneNumberVisible(test.getUser().getMobileNumber())).isTrue();
     }
 
-    @And("^new booing contains correct dates$")
+    @And("^new booking contains correct dates$")
     public void newBooingContainsCorrectDates() {
         assertThat(test.getInvoicePage().isDateVisible(test.getFlight().getDepartureDate())).isTrue();
         assertThat(test.getInvoicePage().isDateVisible(test.getFlight().getReturnDate())).isTrue();
