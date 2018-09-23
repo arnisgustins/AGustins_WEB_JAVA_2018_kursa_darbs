@@ -24,4 +24,4 @@ Feature: This feature is about booking a flight
     Then new booking contains correct airports
       And new booking contains correct flight type and class
       And new booking contains correct user name and phone number
-      And new booing contains correct dates
+      And new booking contains correct dates
