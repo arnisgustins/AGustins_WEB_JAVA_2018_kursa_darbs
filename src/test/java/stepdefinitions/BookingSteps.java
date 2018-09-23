@@ -93,6 +93,5 @@ public class BookingSteps {
         assertThat(test.getConfirmBookingPage().isBookingConfirmationVisible()).isTrue();
         test.getConfirmBookingPage().pressConfirmBookingButton();
         test.getNavigation().waitUntilLoadingisDone();
-        test.getNavigation().waitUntilLoadingisDone(); // Two loadings because it goes through 2 pages at this step
     }
 }
